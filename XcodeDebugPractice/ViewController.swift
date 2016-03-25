@@ -16,35 +16,38 @@ class ViewController: UIViewController {
         // 1. LLDBコマンドをつかってデバッグ出力
         let age = 27
         let name = "Ryosuke Hiramatsu"
+        
+        // 2. QuickLookをつかって画像を確認
         let coverImage = UIImage(named: "sample.jpg")
         
         
-        
-        // 2. CustomStringConvertibleを使う
+        // 3. CustomStringConvertibleを使う
         let person = Person(name: name, age: age, coverImage: coverImage)
         print(person)
         
-        // 3. Breakpointを編集して特別な条件でのみマッチさせる
+
+        // 4. Breakpointを編集して特別な条件でのみマッチさせる
         for i in 0...50 {
             print(i)
         }
-        
-        // 4. 保存したデータを確認する
-        // 4-1. NSUserDefaults
-        NSUserDefaults.standardUserDefaults().setObject("@himara2", forKey: "account")
-        
-        // 4-2. Diskに保存する
+
+        // 5. 保存したデータを確認する
+        // 5-1. NSUserDefaults
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject("@himara2", forKey: "account")
+        defaults.synchronize()
+
+        // 5-2. Diskに保存する
         if let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .AllDomainsMask, true).first,
             coverImage = coverImage {
-            let targetPath = path.stringByAppendingString("sample_data.jpg")
-            
-            let data = UIImageJPEGRepresentation(coverImage, 1)
-            data?.writeToFile(targetPath, atomically: true)
+                let targetPath = path.stringByAppendingString("/sample_data.jpg")
+                if let data = UIImageJPEGRepresentation(coverImage, 0.5) {
+                    let success = data.writeToFile(targetPath, atomically: true)
+                    print(success)
+                }
         }
     }
-
 }
-
 
 class Person: CustomStringConvertible, CustomDebugStringConvertible {
     let name: String
