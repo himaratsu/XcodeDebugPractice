@@ -12,6 +12,7 @@
 		D993464E1CA5620200FE11AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D993464C1CA5620200FE11AF /* Main.storyboard */; };
 		D99346501CA5620200FE11AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D993464F1CA5620200FE11AF /* Assets.xcassets */; };
 		D99346531CA5620200FE11AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D99346511CA5620200FE11AF /* LaunchScreen.storyboard */; };
+		D993465E1CA562D100FE11AF /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D993465D1CA562D100FE11AF /* sample.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D993464F1CA5620200FE11AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D99346521CA5620200FE11AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D99346541CA5620200FE11AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D993465D1CA562D100FE11AF /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		D99346471CA5620200FE11AF /* XcodeDebugPractice */ = {
 			isa = PBXGroup;
 			children = (
+				D993465C1CA5622500FE11AF /* images */,
 				D99346481CA5620200FE11AF /* AppDelegate.swift */,
 				D993464A1CA5620200FE11AF /* ViewController.swift */,
 				D993464C1CA5620200FE11AF /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				D99346541CA5620200FE11AF /* Info.plist */,
 			);
 			path = XcodeDebugPractice;
+			sourceTree = "<group>";
+		};
+		D993465C1CA5622500FE11AF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D993465D1CA562D100FE11AF /* sample.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +136,7 @@
 				D99346531CA5620200FE11AF /* LaunchScreen.storyboard in Resources */,
 				D99346501CA5620200FE11AF /* Assets.xcassets in Resources */,
 				D993464E1CA5620200FE11AF /* Main.storyboard in Resources */,
+				D993465E1CA562D100FE11AF /* sample.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
