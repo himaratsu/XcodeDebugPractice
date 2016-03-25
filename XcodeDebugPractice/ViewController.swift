@@ -14,9 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // 1. LLDBコマンドをつかってデバッグ出力
-        let age = 999
+        let age = 27
         let name = "Ryosuke Hiramatsu"
         let coverImage = UIImage(named: "sample.jpg")
+        
+        
         
         // 2. CustomStringConvertibleを使う
         let person = Person(name: name, age: age, coverImage: coverImage)
